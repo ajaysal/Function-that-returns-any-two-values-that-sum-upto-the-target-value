@@ -1,0 +1,18 @@
+let array = [1,2,3,4]///
+let result =[]
+function getValues(target){
+  
+  for(let i =0;i<array.length;i++){
+    //loop through the array using brute force search method take first element of array and check with adding the 
+   // other element , if sum equals the target push to result array
+    let diff = target - array[i];
+    if(diff <=0) continue;
+   for(let j=0;j<array.length;j++){
+     
+      if(diff  === array[j] && j!== i) {
+        result.push([array[i],array[j]]);
+      }
+   }
+  }
+}
+result[0]// output object [1,2] //target 3
